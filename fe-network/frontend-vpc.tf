@@ -35,6 +35,15 @@ resource "aws_subnet" "frontend_public_subnet03" {
   }
 }
 
+resource "aws_subnet" "frontend_public_subnet04" {
+  vpc_id     = aws_vpc.frontend_vpc.id
+  cidr_block = var.frontend_public_subnet_cidr[3]
+
+  tags = {
+    Name = "${var.frontend_prefix}-public-subnet04-${var.region}"
+  }
+}
+
 resource "aws_subnet" "frontend_private_subnet01" {
   vpc_id     = aws_vpc.frontend_vpc.id
   cidr_block = var.frontend_private_subnet_cidr[0]
