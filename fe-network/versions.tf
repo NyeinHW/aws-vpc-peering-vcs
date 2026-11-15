@@ -2,11 +2,11 @@ terraform {
   required_version = ">= 1.12" # ephemeral resources need >= 1.10
 
   cloud {
-    organization = "waiaung-vpc-lab"
+    organization = "nyein-hello-cloud"
 
     workspaces {
-      project = "aws-vpc-peering-infra"
-      name    = "fe-network-ws"
+      project = "aws-vpc-peering-vcs-project"
+      name    = "fe-network-ws-01"
     }
   }
 
